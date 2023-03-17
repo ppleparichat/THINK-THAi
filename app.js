@@ -1,8 +1,16 @@
-function myNav() {
-    let nav = document.getElementById("myLinks");
-    if (nav.style.display === "block") {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "block";
-    }
-  }
+const navBtn = document.getElementById("nav-click");
+// const closeBtn = document.querySelector(".nav-close");
+const navPopup = document.querySelector(".mobile-container");
+
+
+navBtn.addEventListener("click", () => {
+  const navShow = navPopup.classList.add("show")
+});
+
+// closeBtn.addEventListener("click", () => {
+//   navPopup.classList.remove("show")
+// });
+
+
+
+

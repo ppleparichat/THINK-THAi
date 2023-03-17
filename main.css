@@ -4,62 +4,55 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo_think-thai {
-    width: 5rem;
+.mobile-container img {
+    width: 4rem;
 }
 
 .mobile-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0rem 1rem;
+    margin: 1.2rem 1rem;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #dedede;
-    position: relative;
-    width: 50%;
-    cursor: pointer;
+.mobile-container i {
+    position: fixed;
+    top: 2rem;
+    right: 1.3rem;
 }
 
-.topnav #myLinks {
-    display: none;
+.nav-popup {
+    background-color: #4f4b4b;
+    width: 55%;
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    border-radius: 2px;
+    opacity: 0;
 }
 
-.topnav a {
-    color: #2a2828;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
+.nav-popup * {
+    color: #ffffff;
+    list-style-type: none;
+    padding: 1rem
 }
 
-.active {
-    background-color: #fff;
+.fa-solid {
+    color: rgba(10, 9, 9, 0.2);
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255);
+    pointer-events: all;
 }
 
-.btn-nav {
-    background-color: #2096f3;
-    color: #fff;
-    border-radius: 5px;
-    border-color: #dedede;
-    padding: 0.5rem 1.8rem;
-    cursor: pointer;
+.fa-xmark {
+    font-size: 2.3rem;
+    opacity: 0;
 }
 
-/* ----------------  ------------------ */
-.announcement {
-    display: none;
-    background-color: gold;
-    margin: 0.5rem 0
+.show *{
+    z-index: 111;
+    opacity: 1;
 }
-
-.announcement p {
-    font-size: 1rem;
-}
-
-
 /* --------------------------------------- */
 header {
     display: flex;
@@ -68,7 +61,7 @@ header {
     margin-bottom: 2rem;
     align-items: center;
     justify-content: center;
-    border-bottom: #2a2828 solid 2px;
+    border: #2a2828 solid 2px;
 }
 
 .head {
