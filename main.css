@@ -17,7 +17,7 @@
 
 .mobile-container i {
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     right: 1.3rem;
 }
 
@@ -37,23 +37,39 @@
     padding: 1rem
 }
 
-.fa-solid {
+.nav-popup a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+.nav-popup a:hover  {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.fa-bars {
     color: rgba(10, 9, 9, 0.2);
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: rgba(255, 255, 255);
-    pointer-events: all;
 }
 
 .fa-xmark {
-    font-size: 2.3rem;
+    background: rgba(255, 255, 255);
+    color: rgb(235, 113, 113);
+    font-size: 2.8rem;
+ 
     opacity: 0;
+    pointer-events: none;
 }
 
-.show *{
-    z-index: 111;
+.show * {
     opacity: 1;
+    pointer-events: painted;
+    transition: all 0.2s ease-in-out;
 }
-/* --------------------------------------- */
+
+/* ------------------- HEADER -------------------- */
+
 header {
     display: flex;
     flex-direction: column;
