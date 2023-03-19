@@ -4,8 +4,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav {
+    box-shadow: 0px 8px 8px 1px #f0ece2;
+}
 .mobile-container img {
-    width: 6rem;
+    width: 4rem;
 }
 
 .mobile-container {
@@ -23,7 +26,7 @@
 
 .nav-popup {
     background-color: #596e79;
-    width: 55%;
+    width: 65%;
     position: fixed;
     top: 5rem;
     right: 0;
@@ -40,6 +43,7 @@
 .nav-popup a {
     text-decoration: none;
     letter-spacing: 0.1em;
+    font-size: 1.2rem;
 }
 
 .nav-popup a:hover {
@@ -50,14 +54,14 @@
 .fa-bars {
     color: #c7b198;
     font-size: 2rem;
-    background: rgba(255, 255, 255);
+    border-radius: 5px;
 }
 
 .fa-xmark {
     background: rgba(255, 255, 255);
     color: #c7b198;
     font-size: 2.8rem;
-
+    border-radius: 5px;
     opacity: 0;
     pointer-events: none;
 }
@@ -74,18 +78,26 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
     align-items: center;
     justify-content: center;
-    border: #2a2828 solid 2px;
+    margin: 4rem 1rem;
+    color: #596e79;
+    /* background: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: 75% 50%; */
 }
 
 .head {
     display: flex;
-    margin-top: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.head h1{
+    font-size: 3.5rem;
 }
 
 header img {
@@ -95,13 +107,14 @@ header img {
 
 .btn-apply {
     margin-top: 1rem;
-    padding: 1rem 4rem;
+    padding: 0.7rem 2rem;
     background: #c7b198;
-    color: #596e79;
+    color: #fff;
     border-radius: 50px;
     border: 2px #dedede;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1rem;
+    box-shadow: 4px 5px 6px 2px #596e79;
 }
 
 .header-icons {
@@ -112,11 +125,11 @@ header img {
 /* ----------------------------------- */
 
 .section_one {
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0ece2;
+    border-top: 3px dashed #596e79;
+    color: #596e79;
 }
 
 .section_one img {
@@ -125,8 +138,19 @@ header img {
 }
 
 .main-content {
-    padding: 0 3rem;
-    margin: 1rem 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    margin: 1rem 0;
+}
+
+.main-content div {
+    display: grid;
+    grid-template-columns: 1fr 5fr ;
+    padding: 1rem;
+}
+
+.main-content i {
+    padding: 2rem 0;
 }
 
 /* ----------------books-container ------------- */
@@ -181,7 +205,7 @@ header img {
 .section_onsite img {
     width: 100%;
     height: 100%;
-    border-end-end-radius: 10px;
+    border-radius: 10px;
     margin-bottom: 2rem;
 }
 
