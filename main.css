@@ -97,7 +97,7 @@ header img {
     margin-top: 1rem;
     padding: 1rem 4rem;
     background: #c7b198;
-   color: #596e79;
+    color: #596e79;
     border-radius: 50px;
     border: 2px #dedede;
     cursor: pointer;
@@ -129,13 +129,76 @@ header img {
     margin: 1rem 3rem;
 }
 
+/* ----------------books-container ------------- */
+
+.books-container {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px dashed #596e79;
+    text-align: center;
+}
+
+.books-container h2 {
+    font-size: 4rem;
+    color: #596e79;
+}
+
+.books-container h3 {
+    font-size: 1rem;
+    color: #596e79;
+}
+
+.books-container div {
+    padding: 2rem 0;
+}
+
 /* ------------------Onsite --------------- */
 
-.section_onsite img {
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
+.section_onsite {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px dashed #596e79;
+    text-align: center;
 }
+
+.section_onsite h2 {
+    font-size: 4rem;
+    color: #596e79;
+}
+
+.section_onsite p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #596e79;
+}
+
+.section_onsite div{
+    padding: 2rem 0;
+}
+
+.section_onsite img {
+    width: 100%;
+    height: 100%;
+    border-end-end-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.section_onsite h3 {
+    font-size: 1rem;
+    background: #c7b198;
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.8rem;
+    margin: 0 4rem;
+    box-shadow: 4px 5px 6px 2px #596e79;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
 /* ---------------- Online ---------------- */
 
 .section_online {
@@ -144,19 +207,16 @@ header img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* border: #7ced76 solid; */
-    margin: 4rem auto;
-    border-bottom: 3px  dashed #596e79;
-    border-top: 3px  dashed #596e79;
-
+    padding: 3rem 0;
+    border-bottom: 3px dashed #596e79;
+    border-top: 3px dashed #596e79;
 }
 
 .section_online > div {
     margin: 1.5rem auto;
-    /* border: #2096f3 solid; */
 }
 
-.section_online > div > a {
+.section_online>div>a {
     text-decoration: none;
 }
 
@@ -172,13 +232,13 @@ header img {
 }
 
 .section_online h3 {
-   font-size: 1.5rem;
-   background: #c7b198;
-   color: #596e79;
-   border-radius: 50px;
-   padding: 0.8rem ;
-   margin: 0 2.8rem;
-   box-shadow: 4px 5px 6px 2px #596e79;
+    font-size: 1rem;
+    background: #c7b198;
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.8rem;
+    margin: 0 6rem;
+    box-shadow: 4px 5px 6px 2px #596e79;
 }
 
 .section_online img {
