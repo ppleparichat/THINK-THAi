@@ -82,10 +82,10 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1rem 1rem;
-    color: #596e79;
-    height: 80vh;
-    background: url(./images/Contact2.png);
+    color: #fff;
+    height: 90vh;
+    background: url(./images/cover-phone.png);
+    background-size: cover;
 }
 
 .head {
@@ -134,32 +134,13 @@ header img {
     color: #596e79;
     height: 90vh;
     background: url(./images/Contact2.png) no-repeat;
+    justify-content: center;
+    text-align: center;
 }
 
-.bg-cover {
-    width: 90%;
-    height: 20%;
-    background: #f0ece2;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 4rem 0rem;
-    padding: 3rem 0;
-}
-
-.bg-header {
-    position: relative;
-    top: 0;
-    left: 0;
-
-}
-
-.bg-cover img {
+.section_one img {
     width: 20rem;
     margin: 0rem auto;
-    position: absolute;
-    top: 40px;
-    left: 30px;
     border: 2px #c7b198 solid;
 }
 
@@ -184,7 +165,6 @@ header img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: url(./images/Contact3.png) repeat;
 }
 
 .books-container h2 {
@@ -193,7 +173,8 @@ header img {
 }
 
 .books-container h3 {
-    font-size: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
     color: #596e79;
 }
 
@@ -207,7 +188,7 @@ header img {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    border-top: 3px dashed #596e79;
+    border-top: 4px dashed #dfd3c3;
     text-align: center;
 }
 
@@ -256,8 +237,8 @@ header img {
     align-items: center;
     text-align: center;
     padding: 3rem 0;
-    border-bottom: 3px dashed #596e79;
-    border-top: 3px dashed #596e79;
+    border-bottom: 4px dashed #dfd3c3;
+    border-top: 4px dashed #dfd3c3;
 }
 
 .section_online>div {
@@ -285,13 +266,13 @@ header img {
     color: #fff;
     border-radius: 50px;
     padding: 0.8rem;
-    margin: 0 6rem;
+    margin: 0 7rem;
     box-shadow: 4px 5px 6px 2px #596e79;
 }
 
 .section_online img {
     object-fit: cover;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
