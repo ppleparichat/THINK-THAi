@@ -99,7 +99,7 @@ header {
 
 .head h1 {
     font-size: 2rem;
-   
+   margin-bottom: 3rem;
 }
 .head h2 {
     font-size: 1rem;
@@ -322,7 +322,7 @@ header {
     margin: 3rem auto;
     color: #596e79;
     max-width: 390px;
-    
+    padding: 0 2rem;
 }
 
 .contact h2 {
