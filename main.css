@@ -99,8 +99,9 @@ header {
 
 .head h1 {
     font-size: 2rem;
-   margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
+
 .head h2 {
     font-size: 1rem;
 
@@ -128,7 +129,7 @@ header {
     background: url(./images/Contact2.png) no-repeat;
     background-size: cover;
     justify-content: center;
- 
+
     margin: 2rem 0;
 }
 
@@ -291,6 +292,12 @@ header {
     height: 100%;
 }
 
+
+/* ------------- Youtube --------------- */
+.youtube {
+    padding: 1rem;
+}
+
 /* ------------     GPT     --------------- */
 
 .cta {
@@ -340,6 +347,8 @@ header {
     margin-bottom: 20px;
 }
 
+/* -------------- Form -------------- */
+
 form {
     display: flex;
     flex-direction: column;
@@ -363,7 +372,7 @@ button[type="submit"] {
 }
 
 
-/* ------------------------------- */
+/* -------------- Footer ----------------- */
 footer {
     display: flex;
     flex-direction: column;
