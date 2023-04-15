@@ -170,8 +170,11 @@ header {
     color: #596e79;
 }
 
+.books-container img {
+    width: 50%;
+}
+
 .books-container h3 {
-    margin-top: 1rem;
     font-size: 1.5rem;
     color: #596e79;
 }
