@@ -1,20 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Mono', monospace;
 }
 
-nav {
-    box-shadow: 0px 8px 8px 1px #f0ece2;
+/* ----------------- Progress Bar -------------------- */
 
+.scroll-indicator {
+    width: 100%;
+    height: 4px;
+    background: #afabab;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.progress {
+    width: 0%;
+    background: rgb(242, 39, 39);
+    background: linear-gradient(90deg, rgba(242, 39, 39, 1) 0%, rgba(245, 245, 245, 1) 28%, rgba(8, 6, 171, 1) 50%, rgba(255, 255, 255, 1) 71%, rgba(255, 0, 0, 1) 100%);
+    height: 3px;
+}
+
+.top {
+    display: none;
+}
+
+/* ----------------- Nav Bar -------------------- */
+
+.desktop-container {
+    display: none;
 }
 
 .mobile-container img {
-    width: 5rem;
-    padding: 1.5rem 0;
+    width: 4rem;
+    margin: 0.5rem;
+    color: black;
 }
 
 .mobile-container {
+    margin: 1rem;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,21 +56,23 @@ nav {
     left: 0;
     right: 0;
     background: #fff;
-    box-shadow: 4px 5px 6px 2px #c7b198;
+    /* box-shadow: 4px 1px 5px 2px black; */
+    border: #416EF2 solid 2px;
+    
 }
 
 .mobile-container i {
     position: fixed;
-    top: 1.5rem;
-    right: 1.3rem;
+    top: 1.8rem;
+    right: 2.2rem;
 }
 
 .nav-popup {
-    background-color: #596e79;
+    background-color: #416EF2;
     width: 65%;
     position: fixed;
     top: 5rem;
-    right: 0;
+    right: 1.1rem;
     border-radius: 2px;
     opacity: 0;
 }
@@ -61,14 +95,14 @@ nav {
 }
 
 .fa-bars {
-    color: #c7b198;
+    color: #416EF2;
     font-size: 2rem;
     border-radius: 5px;
 }
 
 .fa-xmark {
-    background: rgba(255, 255, 255);
-    color: #c7b198;
+    background-color: #fff;
+    color: #416EF2;
     font-size: 2.8rem;
     border-radius: 5px;
     opacity: 0;
@@ -81,7 +115,7 @@ nav {
     transition: all 0.2s ease-in-out;
 }
 
-/* ------------------- HEADER -------------------- */
+/* ------------------- Header -------------------- */
 
 header {
     display: flex;
@@ -90,330 +124,578 @@ header {
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    width: 100%;
-    height: 890px;
-    background: url(./images/cover-phone.png);
-    background-size: cover;
-}
-
-.head h1 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-
-.head h2 {
-    font-size: 1rem;
+    color: black;
+    height: 100vh;
 
 }
 
-.btn-apply {
-    margin-top: 1rem;
-    padding: 0.7rem 2rem;
-    background: #c7b198;
-    color: #fff;
-    border-radius: 50px;
-    border: 2px #dedede;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 4px 5px 6px 2px #596e79;
-}
-
-/* ----------------------------------- */
-
-.section_one {
-    display: flex;
-    flex-direction: column;
-    border-top: 3px dashed #fff;
-    color: #596e79;
-    background: url(./images/Contact2.png) no-repeat;
-    background-size: cover;
-    justify-content: center;
-
-    margin: 2rem 0;
-}
-
-.section_one img {
-    width: 20rem;
-    margin: 0rem auto;
-    border: 2px #c7b198 solid;
-}
-
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem 3rem;
-
-
-    font-size: 1.1rem;
-}
-
-.main-content i {
-    padding: 1rem 0;
-    font-size: 2rem;
-}
-
-.main-content p {
-    font-size: .9rem;
-}
-
-/* ----------------books-container ------------- */
-
-.books-container {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.books-container h2 {
-    font-size: 4rem;
-    color: #596e79;
-}
-
-.books-container img {
-    width: 50%;
-}
-
-.books-container h3 {
-    font-size: 1.5rem;
-    color: #596e79;
-}
-
-.books-container button {
-    background-color: #c7b198;
-    /* Green */
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.books-container div {
-    padding: 1rem 0;
-}
-
-/* ------------------Onsite --------------- */
-
-.section_onsite {
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    border-top: 4px dashed #dfd3c3;
-    text-align: center;
-}
-
-.section_onsite h2 {
-    font-size: 4rem;
-    color: #596e79;
-}
-
-.section_onsite p {
+.main-img img {
     margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #596e79;
+    width: 80%;
 }
 
-.section_onsite div {
-    padding: 1rem 0;
+header a {
+    text-decoration: none;
 }
 
-.section_onsite img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+.waviy {
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 1.8rem;
+    padding-top: 5rem;
+    margin: 3rem 0;
+}
+
+.waviy span {
+    display: inline-block;
+    color: black;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
+}
+
+.home :first-child {
+    font-size: 0.8rem;
+    margin: 2rem;
+}
+
+.home :nth-child(2) {
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+
+
+/* ----------------- About me -------------------- */
+
+.bookmark {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+}
+
+.bookmark :first-child {
+    height: 7px;
+    width: 25%;
+    background: #416EF2;
+
+}
+
+.bookmark :nth-child(2) {
+    height: 7px;
+    width: 25%;
+    background: #e71009;
+}
+
+.aboutme {
+    margin: 0 2rem;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.aboutme h1 {
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
-.section_onsite h3 {
-    font-size: 1rem;
-    background: #c7b198;
-    color: #fff;
-    border-radius: 50px;
-    padding: 0.8rem;
-    margin: 0 5rem;
-    box-shadow: 4px 5px 6px 2px #596e79;
-    justify-content: center;
-    text-align: center;
+.about-check {
+    margin: 3rem 0;
+    padding-left: 2.5rem;
+    text-align: left;
 }
 
+.aboutme img {
+    margin-top: 2.5rem;
+}
 
+.aboutme h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 
-/* ---------------- Online ---------------- */
+.aboutme p {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+}
 
-.section_online {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.aboutme {}
+
+.aboutme img {
+    width: 6rem;
+}
+
+/* ---------------- What I do ------------- */
+
+.what-i-do {
+    border-top: 5px dashed #a8a1a1;
+    text-align: center;
     align-items: center;
-    text-align: center;
-    padding: 3rem 0;
-    border-top: 4px dashed #dfd3c3;
+    margin: 2.5rem 1rem;
+    color: black;
 }
 
-.section_online>div {
-    margin: 1.5rem auto;
+.what-i-do h1 {
+    padding: 2rem 0;
+    font-size: 1.8rem;
 }
 
-.section_online>div>a {
+.what-i-do img {
+    width: 70%;
+}
+
+.what-i-do p {
+    font-size: 0.8rem;
+}
+
+.class-think-thai>* {
+    margin: 2rem;
     text-decoration: none;
 }
 
-.section_online h2 {
-    font-size: 4rem;
-    color: #596e79;
-}
 
-.section_online p {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #596e79;
-}
+/* ------------------ My Work ----------------- */
 
-.section_online h3 {
-    font-size: 1rem;
-    background: #c7b198;
-    color: #fff;
-    border-radius: 50px;
-    padding: 0.8rem;
-    margin: 0 7rem;
-    box-shadow: 4px 5px 6px 2px #596e79;
-}
-
-.section_online img {
-    object-fit: cover;
-    width: 80%;
-    height: 100%;
-}
-
-
-/* ------------- Youtube --------------- */
-.youtube {
-    padding: 1rem;
-}
-
-/* ------------     GPT     --------------- */
-
-.cta {
+.my-work {
+    border-top: 5px dashed #a8a1a1;
     text-align: center;
-    margin: 50px 0;
+    align-items: center;
+    margin: 2.5rem 1rem;
+    color: black;
 }
 
-.cta h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.my-work h1 {
+    padding: 2rem 0;
+    font-size: 2.5rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
+.my-work img {
+    width: 90%;
+    margin-bottom: 3rem;
+}
+
+/* ------------------ Books ----------------- */
+
+.books {
+    border-top: 5px dashed #F20505;
+    text-align: center;
+    align-items: center;
+    margin: 2rem 1rem;
+    color: black;
+}
+
+.books h1 {
+    padding: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.books img {
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.books h3 {
+    margin: 1rem;
+    background: #dcddde;
+    padding: 1rem;
     border-radius: 5px;
-    cursor: pointer;
-    background-color: #c7b198;
-    color: #FFFFFF;
-    margin: 0 auto;
 }
 
-.btn:hover {
-    background-color: #596e79;
+/* ------------------ Teachers----------------- */
+
+.teachers {
+    border-top: 5px dashed #F20505;
+    text-align: center;
+    align-items: center;
+    margin: 2.5rem 1rem;
+    color: black;
 }
+
+.teachers h1 {
+    padding: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.teachers img {
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+
+/* ------------------ Contact ----------------- */
 
 .contact {
-    margin: 3rem auto;
-    color: #596e79;
-    max-width: 390px;
-    padding: 0 2rem;
+    margin: 3rem 1rem;
+    color: black;
+    border-top: 5px dashed #F20505;
+}
+
+.contact-img {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact img {
+    margin: 0 auto;
+    width: 80%;
 }
 
 .contact h2 {
-    font-size: 36px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
     margin-bottom: 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 25px;
+    background-color: #F20505;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #416EF2;
+}
+
+/* ------------------ Address ----------------- */
+
+.address {
+    margin: 3rem 1rem;
+    color: black;
     justify-content: center;
     text-align: center;
 }
 
-.contact p {
-    font-size: 20px;
-    margin-bottom: 20px;
+.address h2 {
+    font-size: 3rem;
 }
 
-/* -------------- Form -------------- */
-
-form {
-    display: flex;
-    flex-direction: column;
+.address h3 {
+    margin-top: 1.5rem;
 }
 
-label {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+/* ------------------ Footer ----------------- */
 
-input,
-textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    align-self: flex-end;
-}
-
-
-/* -------------- Footer ----------------- */
 footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+    align-items: center;
     width: 100%;
-    background-color: #f0ece2;
-    color: #596e79;
+    background-color: #416EF2;
+    color: #fff;
 }
 
-.footer-details * {
-    list-style-type: none;
-    text-decoration: none;
-    color: #596e79;
+.footer-icons {
+    padding: 2rem;
 }
 
-.footer-details li {
-    letter-spacing: 1px;
-    padding: 1rem;
-    border-bottom: 1px solid #dfd3c3;
-}
-
-.header-icons i {
+.footer-icons i {
     font-size: 2rem;
-    color: #596e79;
-    letter-spacing: 18px
+    color: #fff;
+    margin: 1rem;
 }
 
-footer div:nth-child(2) {
-    padding: 1rem;
-}
 
 /* ---------------- Copyright ---------------- */
+
 .copyright {
-    background-color: #596e79;
+    background-color: #F20505;
     width: 100%;
-    height: 90px;
+    height: 80px;
 }
 
 .copyright p {
-    color: #f0ece2;
-    text-align: center;
-    padding: 2rem;
+    font-size: 0.9rem;
 }
+
+.copyright p {
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* -----------------Scroll to Top-------------------- */
+
+.top {
+    position: fixed;
+    bottom: 15rem;
+    right: 3rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #0468BF;
+    cursor: pointer;
+    outline: none;
+    z-index: 111;
+    opacity: 0;
+    transform: translateY(10rem);
+    color: #0468BF;
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+/* 
+
+///////////------------ IPAD ---------------
+
+
+*/
+
+@media only screen and (min-device-width: 768px) {
+
+    .progress {
+        height: 6px;
+    }
+
+    .waviy {
+        display: block;
+    }
+
+    .hello-world {
+        display: none;
+    }
+
+    .top {
+        display: block;
+    }
+
+    /* --------------- About me ---------------- */
+
+    .aboutme img {
+        width: 35%;
+    }
+
+    .aboutme p {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .videos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1;
+    }
+
+    .videos img {
+        width: 50%;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    /* ---------------- What I do ------------- */
+    .grid-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-skills img {
+        width: 20%;
+    }
+
+
+    /* ------------------ My Work ----------------- */
+
+    .my-work h2 {
+        font-size: 4rem;
+    }
+
+    .work-list {
+        list-style-type: none;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .work-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    /* ------------------ Contact ----------------- */
+
+    .contact h2 {
+        font-size: 4rem;
+    }
+
+    textarea {
+        font-size: 2.5rem;
+    }
+
+    /* ------------------ Address ----------------- */
+
+    .address h2 {
+        font-size: 4rem;
+    }
+
+    .address h3 {
+        font-size: 2rem;
+    }
+
+    .address p {
+        font-size: 1.5rem;
+    }
+
+
+
+    /* 
+
+///////////------------ Desktop ---------------
+
+
+*/
+    @media only screen and (min-device-width: 1024px) {
+
+        .mobile-container {
+            display: none;
+        }
+
+        .desktop-container {
+            margin: 1rem 2rem;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+        }
+
+        .desktop-container-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+        }
+
+        .desktop-nav-list {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .desktop-container-flex li {
+            list-style-type: none;
+            color: black;
+            padding: 2rem;
+        }
+
+        .desktop-container-flex a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .desktop-container img {
+            width: 10%;
+        }
+
+        .desktop-container i {
+            color: #fff;
+            background-color: #0468BF;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        /* --------------- About me ---------------- */
+
+        .aboutme {
+            margin: 2rem 2rem;
+        }
+
+        .aboutme h1 {
+            font-size: 3rem;
+        }
+
+        .aboutme-flex {
+            display: flex;
+        }
+
+
+
+        /* --------------- My Work ---------------- */
+
+        .my-work h2 {
+            font-size: 3rem;
+        }
+
+        /* --------------- Contact ---------------- */
+
+        .contact-cover {
+            display: flex;
+            margin: 0 2rem;
+            border-top: 5px dashed #fbb040;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            margin: 3rem 1rem;
+            color: #596e79;
+            border-top: 5px dashed #fbb040;
+        }
+
+        .contact {
+            border-top: 5px dashed #fff;
+        }
+
+        .contact-cover h2 {
+            font-size: 3rem;
+        }
+
+        .address h2 {
+            display: none;
+        }
+
+        .address p {
+            font-size: 1rem;
+        }
+    }
