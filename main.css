@@ -429,8 +429,9 @@ footer {
     text-align: center;
     align-items: center;
     width: 100%;
-    background-color: #416EF2;
-    color: #fff;
+    border: #416EF2 solid 4px;
+    background-color: #fff;
+    color: #416EF2;
 }
 
 .footer-icons {
@@ -439,7 +440,7 @@ footer {
 
 .footer-icons i {
     font-size: 2rem;
-    color: #fff;
+    color: #416EF2;
     margin: 1rem;
 }
 
@@ -447,7 +448,7 @@ footer {
 /* ---------------- Copyright ---------------- */
 
 .copyright {
-    background-color: #F20505;
+    background-color: #416EF2;
     width: 100%;
     height: 80px;
 }
