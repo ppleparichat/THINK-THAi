@@ -292,10 +292,9 @@ header a {
     margin: 4rem 0;
 }
 
-.think-thai-price a{
+.think-thai-price a {
     text-decoration: none;
 }
-
 
 
 /* ------------------ Books ----------------- */
@@ -348,15 +347,18 @@ header a {
 /* ------------------ Contact ----------------- */
 
 
-
 .contact h2 {
     font-size: 2.5rem;
     text-align: center;
 }
 
+.ipad-form {
+    margin: 0 2rem;
+}
+
 form {
     max-width: 500px;
-    margin: 0 2rem;
+    margin: 0 auto;
 }
 
 label {
@@ -393,22 +395,6 @@ button[type="submit"]:hover {
     background-color: #416EF2;
 }
 
-/* ------------------ Address ----------------- */
-
-.address {
-    margin: 3rem 1rem;
-    color: black;
-    justify-content: center;
-    text-align: center;
-}
-
-.address h2 {
-    font-size: 3rem;
-}
-
-.address h3 {
-    margin-top: 1.5rem;
-}
 
 /* ------------------ Footer ----------------- */
 
@@ -481,8 +467,7 @@ footer {
 
 /* 
 
-///////////------------ IPAD ---------------
-
+///////////------------ IPAD --------------////////
 
 */
 
@@ -492,207 +477,485 @@ footer {
         height: 6px;
     }
 
-    .waviy {
-        display: block;
-    }
-
-    .hello-world {
-        display: none;
-    }
-
     .top {
         display: block;
     }
 
-    /* --------------- About me ---------------- */
+    /* ------------------- Header -------------------- */
 
-    .aboutme img {
-        width: 35%;
+    .main-img img {
+        width: 90%;
     }
 
-    .aboutme p {
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
-    .videos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1;
-    }
-
-    .videos img {
-        width: 50%;
-        padding: 1rem 0;
-        margin-bottom: 2rem;
-    }
-
-    /* ---------------- What I do ------------- */
-    .grid-skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .grid-skills img {
-        width: 20%;
-    }
-
-
-    /* ------------------ My Work ----------------- */
-
-    .my-work h2 {
+    .waviy {
+        -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
         font-size: 4rem;
+        font-weight: 700;
+        padding-top: 5rem;
+        margin: 4rem 0;
     }
 
-    .work-list {
-        list-style-type: none;
-        font-size: 1rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .work-imgs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-    }
-
-    /* ------------------ Contact ----------------- */
-
-    .contact h2 {
-        font-size: 4rem;
-    }
-
-    textarea {
-        font-size: 2.5rem;
-    }
-
-    /* ------------------ Address ----------------- */
-
-    .address h2 {
-        font-size: 4rem;
-    }
-
-    .address h3 {
-        font-size: 2rem;
-    }
-
-    .address p {
-        font-size: 1.5rem;
-    }
-
-}
-
-/* 
-
-///////////------------ Desktop ---------------
-
-
-*/
-@media only screen and (min-device-width: 1024px) {
-
-    .mobile-container {
-        display: none;
-    }
-
-    .desktop-container {
-        margin: 1rem 2rem;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0rem 1rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #fff;
-    }
-
-    .desktop-container-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-    }
-
-    .desktop-nav-list {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .desktop-container-flex li {
-        list-style-type: none;
+    .waviy span {
+        display: inline-block;
         color: black;
-        padding: 2rem;
+        animation: waviy 1s infinite;
+        animation-delay: calc(.1s * var(--i));
     }
 
-    .desktop-container-flex a {
-        text-decoration: none;
-        color: black;
+    @keyframes waviy {
+
+        0%,
+        40%,
+        100% {
+            transform: translateY(0)
+        }
+
+        20% {
+            transform: translateY(-20px)
+        }
     }
 
-    .desktop-container img {
-        width: 10%;
+    .home :first-child {
+        font-size: 3rem;
+        margin: 4rem;
     }
 
-    .desktop-container i {
-        color: #fff;
-        background-color: #0468BF;
-        padding: 1rem;
-        border-radius: 50%;
-    }
-
-    /* --------------- About me ---------------- */
-
-    .aboutme {
-        margin: 2rem 2rem;
-    }
+    /* ----------------- About me -------------------- */
 
     .aboutme h1 {
         font-size: 3rem;
     }
 
-    .aboutme-flex {
-        display: flex;
+    .aboutme img {
+        margin-top: 3rem;
+    }
+
+    .aboutme h2 {
+        font-size: 2rem;
+    }
+
+    .aboutme p {
+        font-size: 1.3rem;
+    }
+
+    .aboutme img {
+        width: 10rem;
     }
 
 
+    /* ---------------- Our courses ------------- */
 
-    /* --------------- My Work ---------------- */
-
-    .my-work h2 {
+    .courses h1 {
         font-size: 3rem;
     }
 
-    /* --------------- Contact ---------------- */
 
-    .contact-cover {
-        display: flex;
-        margin: 0 2rem;
-        border-top: 5px dashed #fbb040;
-        justify-content: center;
-        align-items: center;
-    }
+    /* ------------------ Think Thai courses ----------------- */
 
-    .contact {
-        margin: 3rem 1rem;
-        color: #596e79;
-        border-top: 5px dashed #fbb040;
-    }
-
-    .contact {
-        border-top: 5px dashed #fff;
-    }
-
-    .contact-cover h2 {
+    .think-thai-class h1 {
         font-size: 3rem;
     }
 
-    .address h2 {
-        display: none;
+    .think-thai-class p {
+        font-size: 1.3rem;
     }
 
-    .address p {
-        font-size: 1rem;
+    /* ------------------ Books ----------------- */
+
+    .books h1 {
+        font-size: 3rem;
+    }
+
+    .books p {
+        font-size: 1.3rem;
+        margin: 2rem 0;
+    }
+
+    /* ------------------ Teachers----------------- */
+
+    .teachers h1 {
+        font-size: 3rem;
+    }
+
+    .teachers p {
+        font-size: 2rem;
+    }
+
+    /* ------------------ Contact ----------------- */
+
+
+    .contact h2 {
+        font-size: 3rem;
     }
 }
+
+
+    /* 
+
+///////////------------ Desktop ---------------
+
+
+*/
+    @media only screen and (min-device-width: 1024px) {
+
+        .mobile-container {
+            display: none;
+        }
+
+        .desktop-container {
+            margin: 1rem 2rem;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: #416EF2 solid 4px;
+            border-radius: 5px;
+        }
+
+        .desktop-container-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+        }
+
+        .desktop-nav-list {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .desktop-container-flex li {
+            list-style-type: none;
+            color: black;
+            padding: 0.5rem 2rem;
+            font-weight: 900;
+        }
+
+        .desktop-container-flex a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .desktop-container img {
+            width: 7%;
+        }
+
+        .desktop-container i {
+            color: #fff;
+            background-color: #416EF2;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+
+        /* ------------------- Header -------------------- */
+
+        .header-container {
+            width: 100wh;
+            margin: 0 5rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main-img img {
+            margin-top: 2rem;
+            width: 50%;
+        }
+
+ 
+        .waviy {
+            font-size: 3rem;
+        }
+
+
+        /* ----------------- About me -------------------- */
+
+        .bookmark {
+            display: flex;
+            flex-direction: row;
+            padding: 4rem 0;
+        }
+
+        .bookmark :first-child {
+            height: 7px;
+            width: 25%;
+            background: #416EF2;
+
+        }
+
+        .bookmark :nth-child(2) {
+            height: 7px;
+            width: 25%;
+            background: #e71009;
+        }
+
+        .aboutme {
+            margin: 0 2rem;
+            text-align: center;
+            align-items: center;
+            color: black;
+        }
+
+        .aboutme h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-check {
+            margin: 3rem 0;
+            padding-left: 2.5rem;
+            text-align: left;
+        }
+
+        .aboutme img {
+            margin-top: 2.5rem;
+        }
+
+        .aboutme h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .aboutme p {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .aboutme img {
+            width: 9rem;
+        }
+
+        /* ---------------- Our courses ------------- */
+
+        .courses {
+            text-align: center;
+            align-items: center;
+            color: black;
+        }
+
+        .courses h1 {
+            font-size: 2.5rem;
+        }
+
+        .courses img {
+            width: 70%;
+        }
+
+
+        .class-think-thai>* {
+            margin: 1rem;
+            text-decoration: none;
+        }
+
+
+        /* ------------------ Think Thai courses ----------------- */
+
+        .think-thai-class {
+            margin: 0 2rem;
+            text-align: center;
+            align-items: center;
+            color: black;
+        }
+
+        .think-thai-class h1 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .think-thai-class p {
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+
+        .think-thai-class span {
+            color: #416EF2;
+            font-weight: 900;
+        }
+
+        .think-thai-class img {
+            width: 90%;
+            margin-bottom: 1rem;
+        }
+
+        .think-thai-price {
+            margin: 4rem 0;
+        }
+
+        .think-thai-price a {
+            text-decoration: none;
+        }
+
+
+        /* ------------------ Books ----------------- */
+
+        .books {
+            margin: 0 2rem;
+            text-align: center;
+            align-items: center;
+            color: black;
+        }
+
+        .books h1 {
+            font-size: 2.5rem;
+        }
+
+        .books img {
+            width: 90%;
+            margin-bottom: 1rem;
+        }
+
+        .books h3 {
+            background: #dcddde;
+            border-radius: 5px;
+        }
+
+        .books p {
+            margin: 2rem 0;
+        }
+
+        /* ------------------ Teachers----------------- */
+
+        .teachers {
+            margin: 0 2rem;
+            text-align: center;
+            align-items: center;
+            color: black;
+        }
+
+        .teachers h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .teachers img {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+
+        /* ------------------ Contact ----------------- */
+
+
+        .contact h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .ipad-form {
+            margin: 0 2rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 25px;
+            background-color: #F20505;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #416EF2;
+        }
+
+
+        /* ------------------ Footer ----------------- */
+
+        footer {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            border: #416EF2 solid 4px;
+            background-color: #fff;
+            color: #416EF2;
+        }
+
+        .footer-icons {
+            padding: 2rem;
+        }
+
+        .footer-icons i {
+            font-size: 2rem;
+            color: #416EF2;
+            margin: 1rem;
+        }
+
+
+        /* ---------------- Copyright ---------------- */
+
+        .copyright {
+            background-color: #416EF2;
+            width: 100%;
+            height: 80px;
+        }
+
+        .copyright p {
+            font-size: 0.9rem;
+        }
+
+        .copyright p {
+            color: #fff;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* -----------------Scroll to Top-------------------- */
+
+        .top {
+            position: fixed;
+            bottom: 15rem;
+            right: 3rem;
+            font-size: 3rem;
+            padding: 0.5rem;
+            background: transparent;
+            border-radius: 5px;
+            border: 2px solid #0468BF;
+            cursor: pointer;
+            outline: none;
+            z-index: 111;
+            opacity: 0;
+            transform: translateY(10rem);
+            color: #0468BF;
+        }
+
+        .showBtn {
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+    }
