@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
 
 * {
     padding: 0;
@@ -57,7 +57,8 @@
     right: 0;
     background: #fff;
     /* box-shadow: 4px 1px 5px 2px black; */
-    border: #416EF2 solid 2px;
+    border: #416EF2 solid 3px;
+    border-radius: 5px;
 
 }
 
@@ -141,6 +142,7 @@ header a {
 .waviy {
     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
     font-size: 1.8rem;
+    font-weight: 700;
     padding-top: 5rem;
     margin: 3rem 0;
 }
@@ -166,12 +168,12 @@ header a {
 }
 
 .home :first-child {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin: 2rem;
 }
 
 .home :nth-child(2) {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 2rem;
 }
 
@@ -206,7 +208,7 @@ header a {
 }
 
 .aboutme h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -227,58 +229,62 @@ header a {
 
 .aboutme p {
     margin-top: 1rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .aboutme img {
-    width: 6rem;
+    width: 9rem;
 }
 
 /* ---------------- What I do ------------- */
 
-.what-i-do {
-    border-top: 5px dashed #a8a1a1;
+.courses {
+    margin: 0 2rem;
     text-align: center;
     align-items: center;
-    margin: 2.5rem 1rem;
     color: black;
 }
 
-.what-i-do h1 {
-    padding: 2rem 0;
-    font-size: 1.8rem;
+.courses h1 {
+    font-size: 2.5rem;
 }
 
-.what-i-do img {
+.courses img {
     width: 70%;
 }
 
-.what-i-do p {
-    font-size: 0.8rem;
-}
 
 .class-think-thai>* {
-    margin: 2rem;
+    margin: 1rem;
     text-decoration: none;
 }
 
 
 /* ------------------ My Work ----------------- */
 
-.my-work {
-    border-top: 5px dashed #a8a1a1;
+.think-thai-class {
+    margin: 0 2rem;
     text-align: center;
     align-items: center;
-    margin: 2.5rem 1rem;
     color: black;
 }
 
-.my-work h1 {
-    padding: 2rem 0;
+.think-thai-class h1 {
     font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.my-work img {
+.think-thai-class p {
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+.think-thai-class span {
+    color: #416EF2;
+    font-weight: bold;
+}
+
+.think-thai-class img {
     width: 90%;
     margin-bottom: 3rem;
 }
@@ -388,7 +394,8 @@ button[type="submit"] {
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -462,7 +469,7 @@ footer {
     position: fixed;
     bottom: 15rem;
     right: 3rem;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0.5rem;
     background: transparent;
     border-radius: 5px;
