@@ -25,7 +25,7 @@
     width: 0%;
     background: rgb(242, 39, 39);
     background: linear-gradient(90deg, rgba(242, 39, 39, 1) 0%, rgba(245, 245, 245, 1) 28%, rgba(8, 6, 171, 1) 50%, rgba(255, 255, 255, 1) 71%, rgba(255, 0, 0, 1) 100%);
-    height: 3px;
+    height: 5px;
 }
 
 .top {
@@ -168,7 +168,7 @@ header a {
 }
 
 .home :first-child {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 2rem;
 }
 
@@ -236,10 +236,9 @@ header a {
     width: 9rem;
 }
 
-/* ---------------- What I do ------------- */
+/* ---------------- Our courses ------------- */
 
 .courses {
-    margin: 0 2rem;
     text-align: center;
     align-items: center;
     color: black;
@@ -260,7 +259,7 @@ header a {
 }
 
 
-/* ------------------ My Work ----------------- */
+/* ------------------ Think Thai courses ----------------- */
 
 .think-thai-class {
     margin: 0 2rem;
@@ -281,26 +280,34 @@ header a {
 
 .think-thai-class span {
     color: #416EF2;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .think-thai-class img {
     width: 90%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
+
+.think-thai-price {
+    margin: 4rem 0;
+}
+
+.think-thai-price a{
+    text-decoration: none;
+}
+
+
 
 /* ------------------ Books ----------------- */
 
 .books {
-    border-top: 5px dashed #F20505;
+    margin: 0 2rem;
     text-align: center;
     align-items: center;
-    margin: 2rem 1rem;
     color: black;
 }
 
 .books h1 {
-    padding: 2rem 0;
     font-size: 2.5rem;
 }
 
@@ -310,62 +317,46 @@ header a {
 }
 
 .books h3 {
-    margin: 1rem;
     background: #dcddde;
-    padding: 1rem;
     border-radius: 5px;
+}
+
+.books p {
+    margin: 2rem 0;
 }
 
 /* ------------------ Teachers----------------- */
 
 .teachers {
-    border-top: 5px dashed #F20505;
+    margin: 0 2rem;
     text-align: center;
     align-items: center;
-    margin: 2.5rem 1rem;
     color: black;
 }
 
 .teachers h1 {
-    padding: 2rem 0;
     font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .teachers img {
-    width: 90%;
-    margin-bottom: 1rem;
+    width: 100%;
+    margin: 2rem 0;
 }
 
 
 /* ------------------ Contact ----------------- */
 
-.contact {
-    margin: 3rem 1rem;
-    color: black;
-    border-top: 5px dashed #F20505;
-}
 
-.contact-img {
-    text-align: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.contact img {
-    margin: 0 auto;
-    width: 80%;
-}
 
 .contact h2 {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
     font-size: 2.5rem;
     text-align: center;
 }
 
 form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 2rem;
 }
 
 label {
@@ -383,7 +374,6 @@ textarea {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
 }
 
 button[type="submit"] {
@@ -423,6 +413,7 @@ button[type="submit"]:hover {
 /* ------------------ Footer ----------------- */
 
 footer {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
