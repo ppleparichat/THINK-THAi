@@ -79,3 +79,20 @@ function scrollToTopFunc() {
     }
   }
   
+
+  // JavaScript for testimonial slider functionality
+const testimonialSlider = document.querySelector('.testimonial-slider');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+// Event listeners for previous and next buttons
+prevButton.addEventListener('click', scrollSlider.bind(null, 'prev'));
+nextButton.addEventListener('click', scrollSlider.bind(null, 'next'));
+
+// Function to scroll the slider
+function scrollSlider(direction) {
+  const testimonialWidth = testimonialSlider.offsetWidth;
+  const scrollAmount = direction === 'prev' ? -testimonialWidth : testimonialWidth;
+  testimonialSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
