@@ -12,6 +12,15 @@ closeBtn.addEventListener("click", () => {
   navPopup.classList.remove("show");
 });
 
+// Add an event listener to close the navigation when a navigation item is clicked
+const navItems = document.querySelectorAll(".nav-item");
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navPopup.classList.remove("show");
+  });
+});
+
+
 
 
 const progressEl = document.querySelector(".progress");

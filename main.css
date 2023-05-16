@@ -349,7 +349,7 @@ header a {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1rem 2rem;
   }
   
   .testimonial-slider {
@@ -362,7 +362,7 @@ header a {
   }
   
   .testimonial {
-    width: 400px;
+    width: 100%;
     flex: 0 0 auto;
     padding: 20px;
     text-align: center;
@@ -377,12 +377,12 @@ header a {
   }
   
   .testimonial-name {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
   }
   
   .testimonial-text {
-    margin-top: 0.1rem;
+    font-size: 0.7rem;
   }
   
   .slide-buttons {
@@ -399,6 +399,7 @@ header a {
     background-color: #eaeaea;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 1rem;
   }
   
   .prev-button:hover,
