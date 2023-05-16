@@ -704,24 +704,22 @@ footer {
 
         /* ---------------- Our courses ------------- */
 
-        .courses {
-            text-align: center;
-            align-items: center;
-            color: black;
-        }
 
         .courses h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
 
         .courses img {
             width: 70%;
         }
 
+        .class-think-thai {
+            display: flex;
+            justify-content: center;
+        }
 
-        .class-think-thai>* {
-            margin: 1rem;
-            text-decoration: none;
+        .class-think-thai a {
+            margin: 3rem 3rem;
         }
 
 
