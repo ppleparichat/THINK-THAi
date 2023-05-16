@@ -725,39 +725,12 @@ footer {
 
         /* ------------------ Think Thai courses ----------------- */
 
-        .think-thai-class {
-            margin: 0 2rem;
-            text-align: center;
-            align-items: center;
-            color: black;
+        .group-private {
+            display: flex;
         }
 
-        .think-thai-class h1 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .think-thai-class p {
-            font-size: 0.9rem;
-            margin-bottom: 3rem;
-        }
-
-        .think-thai-class span {
-            color: #416EF2;
-            font-weight: 900;
-        }
-
-        .think-thai-class img {
-            width: 90%;
-            margin-bottom: 1rem;
-        }
-
-        .think-thai-price {
-            margin: 4rem 0;
-        }
-
-        .think-thai-price a {
-            text-decoration: none;
+        .group-private img{
+            width: 70%;
         }
 
 
