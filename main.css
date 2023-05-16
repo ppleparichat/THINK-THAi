@@ -597,6 +597,10 @@ footer {
 */
     @media only screen and (min-device-width: 1024px) {
 
+        body {
+            margin: 0 4rem;
+        }
+
         .mobile-container {
             display: none;
         }
@@ -654,10 +658,11 @@ footer {
 
         /* ------------------- Header -------------------- */
 
-        .header-container {
-            width: 100wh;
+        .header-con {
+            height: auto;
             margin: 0 5rem;
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
         }
 
@@ -668,7 +673,7 @@ footer {
 
  
         .waviy {
-            font-size: 3rem;
+            font-size: 5rem;
         }
 
 
