@@ -279,7 +279,6 @@ header a {
 }
 
 .think-thai-class span {
-    color: #416EF2;
     font-weight: 900;
 }
 
@@ -731,6 +730,21 @@ footer {
 
         .group-private img{
             width: 70%;
+        }
+
+        .malmo-div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        .malmo-div :first-child {
+            text-align: left;
+        }
+
+        .malmo-div p{
+            font-size: 1rem;
         }
 
 
