@@ -803,7 +803,7 @@ footer {
             width: 70%;
         }
 
-        .malmo-div {
+        .malmo-div, .group-private, .group-private {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
